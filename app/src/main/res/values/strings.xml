@@ -1,0 +1,12 @@
+<resources>
+    <string name="app_name">ProMobi App</string>
+    <string name="string_search">Search</string>
+    <string name="string_no_internet_connection">No Internet Connection…</string>
+    <string name="string_loading">Loading....</string>
+    <string name="string_offline_message"><![CDATA[You are offline & we didn\'t found any saved articles for you. check your connectivity]]></string>
+    <string name="string_online">You are online.</string>
+    <string name="string_offline">You are offline. Check your connectivity.</string>
+    <string name="share_text">Share</string>
+
+    <string name="title_article_search">Article Search</string>
+</resources>
