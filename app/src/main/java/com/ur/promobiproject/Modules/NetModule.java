@@ -18,7 +18,7 @@ import retrofit2.Retrofit;
 import retrofit2.converter.gson.GsonConverterFactory;
 
 @Module
-public class NetModule {
+public class NetModule { //TODO: Use it while segregating different modules like Network, Storage, etc.
 
     String mBaseUrl;
 
