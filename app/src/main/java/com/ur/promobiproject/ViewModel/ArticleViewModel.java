@@ -65,7 +65,7 @@ public class ArticleViewModel extends ViewModel {
         return localRepository.getOneArticle();
     }
 
-    public void insertCoupon(ArticleEntity article){
+    public void insertArticle(ArticleEntity article){
         localRepository.insertArticle(article);
     }
 
