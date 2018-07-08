@@ -57,5 +57,6 @@
     <dimen name="dimen_ten_dp">10dp</dimen>
     <dimen name="dimen_10dp">10dp</dimen>
     <dimen name="dimen_16_dp">16dp</dimen>
+    <dimen name="dimen_100">100dp</dimen>
 
 </resources>
