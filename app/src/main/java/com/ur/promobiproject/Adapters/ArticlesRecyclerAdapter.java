@@ -56,7 +56,7 @@ public class ArticlesRecyclerAdapter extends RecyclerView.Adapter<ArticlesRecycl
 
         Glide.with(context).load(article.getImageUrl())     //TODO: Save Image in local db as well.
                 .diskCacheStrategy(DiskCacheStrategy.ALL)
-                .placeholder(R.drawable.nytimes)
+                .placeholder(R.drawable.nytimes)                // New York Times Image will be shown if there is no image in the response.
                 .into(holder.ivArticle);
 
     }

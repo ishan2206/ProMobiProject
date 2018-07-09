@@ -139,21 +139,25 @@ public class MainActivity extends AppCompatActivity {
             @Override
             public boolean onQueryTextSubmit(String query) {
 
-                articleViewModel.deleteAllArticles();
-                articles.clear();
-                articlesRecyclerAdapter.notifyDataSetChanged();
-                searchQuery = query;
-                requestArticles(searchQuery, 1);
+                if(isNetworkConnected) {            // TODO: Save keywords in db and enable offline search.
+                    articleViewModel.deleteAllArticles();
+                    articles.clear();
+                    articlesRecyclerAdapter.notifyDataSetChanged();
+                    searchQuery = query;
+                    requestArticles(searchQuery, 1);
 
-                if(query.equalsIgnoreCase("")){ // If search text is empty set it to default query.
-                    searchQuery = Constants.DEFAULT_QUERY;
-                }
+                    if (query.equalsIgnoreCase("")) { // If search text is empty set it to default query.
+                        searchQuery = Constants.DEFAULT_QUERY;
+                    }
 
-                if( ! searchView.isIconified()) {
-                    searchView.setIconified(true);
+                    if (!searchView.isIconified()) {
+                        searchView.setIconified(true);
+                    }
+                    searchView.clearFocus();
+                    searchMenuItem.collapseActionView();
+                    return true;
                 }
-                searchView.clearFocus();
-                searchMenuItem.collapseActionView();
+                Snackbar.make((MainActivity.this).findViewById(android.R.id.content), R.string.string_offline, Snackbar.LENGTH_LONG).show();
                 return true;
 
             }
