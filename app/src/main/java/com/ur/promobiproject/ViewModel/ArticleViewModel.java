@@ -100,8 +100,8 @@ public class ArticleViewModel extends ViewModel {
 
                             ArticleEntity articleEntity = new ArticleEntity();
                             articleEntity.setHeadline(docs.getHeadline().getMain());
-                           articleEntity.setDate(DateFormat.getDateTimeInstance().format(new Date()));
-                            //articleEntity.setDate(docs.getPub_date());
+                           //articleEntity.setDate(DateFormat.getDateTimeInstance().format(new Date()));
+                            articleEntity.setDate(docs.getPub_date());
                             articleEntity.setImageUrl(imageUrl);
                             articleEntity.setSearchQuery(q);
                             articleEntity.setWebUrl(docs.getWeb_url());
