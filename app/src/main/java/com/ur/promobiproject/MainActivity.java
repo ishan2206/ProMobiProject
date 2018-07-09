@@ -44,7 +44,8 @@ public class MainActivity extends AppCompatActivity {
 
     @Inject
     Retrofit retrofit;
-    ArrayList<ArticleEntity> articles;
+
+    private ArrayList<ArticleEntity> articles;
 
     @Inject @Named("activity")
     CompositeDisposable compositeDisposable;
@@ -54,13 +55,13 @@ public class MainActivity extends AppCompatActivity {
 
 
     @Bind(R.id.rvArticles)
-    RecyclerView articlesRecyclerView;
+     RecyclerView articlesRecyclerView;
     @Bind(R.id.toolbar)
     Toolbar toolbar;
     private NetworkReceiver networkReceiver;
     private ArticleViewModel articleViewModel;
-    ArticlesRecyclerAdapter articlesRecyclerAdapter;
-    EndlessRecyclerOnScrollListener scrollListener;
+    private ArticlesRecyclerAdapter articlesRecyclerAdapter;
+    private EndlessRecyclerOnScrollListener scrollListener;
     private static boolean isNetworkConnected;
     private static String searchQuery = Constants.DEFAULT_QUERY;
 
